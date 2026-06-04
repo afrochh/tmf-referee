@@ -78,7 +78,7 @@ const DAYS = [
 ];
 
 const SECTIONS = {
-  day2: (typeof DAY2_SECTIONS !== "undefined" ? DAY2_SECTIONS : []),
+  day2: [],
   day1: [
     { id: "kayit",   label: "Kayıt & Belge" },
     { id: "cagirma", label: "Tartıya Çağırma" },
@@ -395,6 +395,11 @@ function showDone() {
 }
 
 function restartQuiz() { qIdx = 0; score = 0; shuffledQuiz = []; renderQuiz(); }
+
+// Load day2 data if available
+if (typeof DAY2_SECTIONS !== "undefined") {
+  SECTIONS["day2"] = DAY2_SECTIONS;
+}
 
 buildDayNav();
 buildSecNav();
