@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>IFMA Muaythai – Hakem İngilizcesi</title>
+<script src="day2.js"></script>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f5f5f5;color:#1a1a1a}
@@ -73,10 +74,12 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 
 <script>
 const DAYS = [
-  { id: "day1", label: "📋 Kayıt ve Tartı Günü" }
+  { id: "day1", label: "📋 Kayıt ve Tartı Günü" },
+  { id: "day2", label: "🥊 Müsabaka Alanı" }
 ];
 
 const SECTIONS = {
+  day2: (typeof DAY2_SECTIONS !== "undefined" ? DAY2_SECTIONS : []),
   day1: [
     { id: "kayit",   label: "Kayıt & Belge" },
     { id: "cagirma", label: "Tartıya Çağırma" },
@@ -275,6 +278,9 @@ function buildSecNav() {
 function switchDay(id) {
   curDay = id;
   curSec = SECTIONS[id][0].id;
+  shuffledQuiz = [];
+  score = 0;
+  qIdx = 0;
   buildDayNav();
   buildSecNav();
   render();
@@ -287,7 +293,7 @@ function switchSec(id) {
 }
 
 function render() {
-  if (curSec === "senaryo") {
+  if (curSec === "senaryo" || curSec === "d2_senaryo") {
     renderQuiz();
   } else {
     renderPhrases();
@@ -295,7 +301,8 @@ function render() {
 }
 
 function renderPhrases() {
-  const list = PHRASES[curSec] || [];
+  const allPhrases = Object.assign({}, PHRASES, (typeof DAY2_PHRASES !== "undefined" ? DAY2_PHRASES : {}));
+  const list = allPhrases[curSec] || [];
   const c = document.getElementById("content");
   c.innerHTML = list.map(p => `
     <div class="phrase-card">
@@ -313,7 +320,8 @@ function renderPhrases() {
 
 function renderQuiz() {
   const c = document.getElementById("content");
-  if (shuffledQuiz.length === 0) shuffledQuiz = shuffle(QUIZ);
+  const activeQuiz = (curDay === "day2" && typeof DAY2_QUIZ !== "undefined") ? DAY2_QUIZ : QUIZ;
+  if (shuffledQuiz.length === 0) shuffledQuiz = shuffle(activeQuiz);
   if (qIdx >= shuffledQuiz.length) { showDone(); return; }
 
   const q = shuffledQuiz[qIdx];
