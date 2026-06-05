@@ -393,16 +393,18 @@ function showDone() {
       <button class="rbtn" onclick="restartQuiz()">↺ Tekrar Başla</button>
     </div>`;
 }
+
+function restartQuiz() { qIdx = 0; score = 0; shuffledQuiz = []; renderQuiz(); }
+
+</script>
 <script src="day2.js"></script>
 <script>
-
-// Load day2 data if available
-if (typeof DAY2_SECTIONS !== "undefined") {
-  SECTIONS["day2"] = DAY2_SECTIONS;
+if (typeof window.DAY2_SECTIONS !== "undefined") {
+  SECTIONS["day2"] = window.DAY2_SECTIONS;
 }
-
 buildDayNav();
-  buildSecNav();
-  render();
+buildSecNav();
+render();
 </script>
 </body>
+</html>
