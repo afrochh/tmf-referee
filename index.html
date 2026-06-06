@@ -59,16 +59,18 @@ body{
 .p-alt{font-size:12px;color:#185FA5;font-style:italic;margin-bottom:3px}
 .p-ph{font-size:11px;color:#4a90c4;font-style:italic;margin-bottom:5px}
 .p-tr{font-size:12px;color:#555;line-height:1.4;margin-bottom:9px}
-.btn-row{display:flex;gap:6px;flex-wrap:wrap;align-items:center;justify-content:space-between;}
+
+/* 🏢 Buton Satırı Hizalaması Sıkılaştırıldı */
+.btn-row{display:flex;gap:6px;flex-wrap:wrap;align-items:center;}
 
 .sbtn{display:flex;align-items:center;gap:4px;padding:5px 11px;font-size:11px;border:1px solid #ddd;border-radius:8px;background:#f8f8f8;color:#333;cursor:pointer;font-weight:500}
 .sbtn:active{background:#e8e8e8}
 .sbtn-alt{display:flex;align-items:center;gap:4px;padding:5px 11px;font-size:11px;border:1px solid #c5d5e8;border-radius:8px;background:#f0f4f9;color:#185FA5;cursor:pointer}
 
-/* ⏱️ Kart İçi Mikro Hız Seçici Tasarımı */
-.card-speed-wrapper {display:flex;align-items:center;gap:3px;margin-left:auto;background:#f1f5f9;padding:2px 4px;border-radius:6px;border:1px solid #e2e8f0}
-.card-speed-label {font-size:9px;color:#64748b;font-weight:600;margin-right:2px}
-.card-speed-select {padding:2px 4px;font-size:10px;font-weight:700;border:1px solid #cbd5e1;border-radius:4px;background:#fff;color:#334155;cursor:pointer;outline:none}
+/* ⏱️ Tasarım Küçültüldü: Sadece İçeriği Kapsayacak Kadar Ayarlandı */
+.card-speed-wrapper {display:inline-flex;align-items:center;gap:3px;background:#f1f5f9;padding:2px 6px;border-radius:6px;border:1px solid #e2e8f0;width:fit-content}
+.card-speed-label {font-size:9px;color:#64748b;font-weight:600}
+.card-speed-select {padding:2px 2px;font-size:10px;font-weight:700;border:1px solid #cbd5e1;border-radius:4px;background:#fff;color:#334155;cursor:pointer;outline:none}
 
 .q-bar{display:flex;gap:6px;align-items:center;margin-bottom:10px}
 .q-pill{padding:4px 10px;font-size:11px;border-radius:20px;background:#fff;color:#555;border:1px solid #ddd;font-weight:500}
@@ -201,7 +203,6 @@ function buildL2() {
     ).join("")}</div>`;
 }
 
-// ─── 4. RENDERING ENGINE (EN ve TR Karışık Yapı Geri Geldi) ───────
 function buildL3() {
   const l2node = getL2Node();
   if (!l2node || l2node.isQuiz || !l2node.l3 || l2node.l3.length === 0) {
@@ -290,6 +291,7 @@ function switchL4(id) {
   buildL4(); render();
 }
 
+// ─── 4. RENDERING ENGINE ──────────────────────────────────────────
 function render() {
   if (isScenario(curSec)) renderQuiz();
   else renderPhrases();
@@ -354,7 +356,6 @@ function renderQuiz() {
   const quizSesKodu = `quiz_${curSec}_${qIdx + 1}`;
   const quizSelectId = `speed_sel_quiz_${curSec}_${qIdx}`;
 
-  // EN üstte kalın harf, TR hemen altında italik olarak düzenlendi
   c.innerHTML = `
     <div class="q-bar">
       <div class="q-pill">Skor: <b id="sc">${score}</b></div>
@@ -396,7 +397,7 @@ function checkAns(idx, correct, ex, ans, sesKodu, quizSelectId) {
   fb.innerHTML = fbContent + `
     <div style="display:flex; align-items:center; gap:8px; margin-top:6px;">
       <button class="sbtn" id="sp-ans">🔊 Doğru Cevabı Dinle</button>
-      <div class="card-speed-wrapper" style="margin-left:0;">
+      <div class="card-speed-wrapper">
         <span class="card-speed-label">HIZ:</span>
         <select class="card-speed-select" id="${quizSelectId}">
           <option value="0.6">0.6x (Tane Tane)</option>
@@ -523,7 +524,7 @@ const NAV = {
   }
 };
 
-// ─── PHRASES DATA (Duru ve Net Türkçe Telaffuz Rehberleri) ───────────
+// ─── PHRASES DATA ──────────────────────────────────────────────────
 const PHRASES = {
   kayit: [
     { en: "Hello, welcome. Which country are you representing?", alt: "Welcome! Your country?", ph: "Helo, velkam. Vic kantri ar yu reprizenting?", tr: "Merhaba, hoş geldiniz. Hangi ülkeyi temsil ediyorsunuz?" },
