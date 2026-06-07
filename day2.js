@@ -1,3 +1,10 @@
+window.QUIZ_JUDGE = window.QUIZ_JUDGE || [];
+window.QUIZ_TIMEKEEPER = window.QUIZ_TIMEKEEPER || [];
+window.QUIZ_ANNOUNCER = window.QUIZ_ANNOUNCER || [];
+window.QUIZ_EQUIPMENT = window.QUIZ_EQUIPMENT || [];
+
+// Motorun sekme değiştirince doğru diziyi bulması için:
+window.QUIZ = window.QUIZ_JURY;
 window.QUIZ_JURY = window.QUIZ_JURY || [];
 window.QUIZ_TIMEKEEPER = window.QUIZ_TIMEKEEPER || [];
 window.QUIZ_ANNOUNCER = window.QUIZ_ANNOUNCER || [];
