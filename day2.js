@@ -1,4 +1,14 @@
+// day2.js dosyanın en başına bu satırı ekle
 window.QUIZ_JURY = window.QUIZ_JURY || [];
+window.QUIZ_TIMEKEEPER = window.QUIZ_TIMEKEEPER || [];
+window.QUIZ_ANNOUNCER = window.QUIZ_ANNOUNCER || [];
+window.QUIZ_EQUIPMENT = window.QUIZ_EQUIPMENT || [];
+
+// Sonra tanımlarını window ile yap
+window.QUIZ_JURY = [
+  { sit: "**EN: ...**", opts: [...], c: 0 },
+  // ... diğer sorular
+];
 // =================================================================
 // ─── TMF MUAYTHAI HAKEM EGİTİM MODÜLÜ - DAY 2 VERİ HAVUZU ────────
 // =================================================================
