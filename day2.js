@@ -30,16 +30,16 @@ window.DAY2_PHRASES = {
     { en: "The athlete took a heavy strike to the groin.", alt: "Heavy groin strike.", ph: "Dı esliit tuk ey hevi strayk tu dı groyn.", phs: "Hevi groyn strayk.", tr: "Sporcu kasığına ağır darbe aldı." },
     { en: "The athlete took a heavy strike to the body.", alt: "Heavy body strike.", ph: "Dı esliit tuk ey hevi strayk tu dı badi.", phs: "Hevi badi strayk.", tr: "Sporcu gövdesine ağır darbe aldı." },
     { en: "The athlete vomited.", alt: "Vomited.", ph: "Dı esliit vamitıd.", phs: "Vamitıd.", tr: "Sporcu kustu." },
-    { en: "The athlete fainted.", alt: "Fainted.", ph: "Dı esliit feyntıd.", phs: "Feyntıd.", tr: "Sporcu bayıldı." }
+    { en: "The athlete fainted.", alt: "Fainted.", ph: "Dı esliit feyntıd.", phs: "Feyntıd.", tr: "Sporcu bayıldı." },
   ],
   d2_juri_diy: [
     { en: "I need to make a phone call. May I?", alt: "", ph: "Ay niid tu meyk ey foon kool. Mey ay?", phs: "", tr: "Telefon görüşmesi yapmam gerekiyor." },
     { en: "May I go to the restroom?", alt: "", ph: "Mey ay goo tu dı restruum?", phs: "", tr: "Lavaboya gidebilir miyim?" },
     { en: "Thank you for your understanding.", alt: "Thank you.", ph: "Thenk yu for yor andırstendıng.", phs: "Thenk yu.", tr: "Anlayışınız için teşekkür ederim." },
-    { en: "Thank you for your feedback. I will be careful.", alt: "Thank you. I'll be careful.", ph: "Thenk yu for yor fiidbek. Ay vil bi kerful.", phs: "Thenk yu. Ayl bi kerful.", tr: "Geri bildiriminiz için teşekkür ederim." },
-    { en: "I am sorry for my mistake. I will be careful.", alt: "Sorry. I'll be careful.", ph: "Ay em sori for may misteyk. Ay vil bi kerful.", phs: "Sori. Ayl bi kerful.", tr: "Hatam için özür dilerim." },
+    { en: "Thank you for your feedback. I will be careful.", alt: "Thank you. I'll be careful.", ph: "Thenk yu for yor fiidbek. Ay vil bi kerful.", phs: "Thenk yu. Ayl bi kerful.", tr: "Geri bildiriminiz için teşekkür ederim. Dikkat edeceğim." },
+    { en: "I am sorry for my mistake. I will be careful.", alt: "Sorry. I'll be careful.", ph: "Ay em sori for may misteyk. Ay vil bi kerful.", phs: "Sori. Ayl bi kerful.", tr: "Hatam için özür dilerim. Dikkat edeceğim." },
     { en: "I can help you.", alt: "I can help.", ph: "Ay kan help yu.", phs: "Ay kan help.", tr: "Yardım edebilirim." },
-    { en: "Can you help me, please?", alt: "Help me, please.", ph: "Kan yu help mi, pliiz?", phs: "Help mi, pliiz.", tr: "Bana yardımcı olabilir misiniz?" }
+    { en: "Can you help me, please?", alt: "Help me, please.", ph: "Kan yu help mi, pliiz?", phs: "Help mi, pliiz.", tr: "Bana yardımcı olabilir misiniz?" },
   ],
   d2_juri_gov: [
     { en: "Do I have a duty?", alt: "Any duty for me?", ph: "Duu ay hav ey dyuuti?", phs: "Eni dyuuti for mi?", tr: "Görevim var mı?" },
@@ -49,7 +49,7 @@ window.DAY2_PHRASES = {
     { en: "Which category is it?", alt: "Which category?", ph: "Viç ketıgori iz it?", phs: "Viç ketıgori?", tr: "Hangi kategori?" },
     { en: "May I check the duty list?", alt: "", ph: "Mey ay çek dı dyuuti list?", phs: "", tr: "Görev listesine bakabilir miyim?" },
     { en: "Which bout number is it?", alt: "Which bout?", ph: "Viç baut nambır iz it?", phs: "Viç baut?", tr: "Kaçıncı maç?" },
-    { en: "Which ring is it?", alt: "Which ring?", ph: "Viç ring iz it?", phs: "Viç ring?", tr: "Hangi ring?" }
+    { en: "Which ring is it?", alt: "Which ring?", ph: "Viç ring iz it?", phs: "Viç ring?", tr: "Hangi ring?" },
   ],
   d2_hakem: [
     { en: "I don't feel well. May I rest?", alt: "Not feeling well. May I rest?", ph: "Ay doont fiil vel. Mey ay rest?", phs: "Not fiiling vel. Mey ay rest?", tr: "Kendimi iyi hissetmiyorum." },
@@ -66,14 +66,14 @@ window.DAY2_PHRASES = {
     { en: "My blood pressure is low.", alt: "Low blood pressure.", ph: "May blad preşır iz loo.", phs: "Loo blad preşır.", tr: "Tansiyonum düştü." },
     { en: "I have a migraine.", alt: "Migraine.", ph: "Ay hev ey maygreyn.", phs: "Maygreyn.", tr: "Migren ağrım var." },
     { en: "I need to change my clothes.", alt: "Need to change.", ph: "Ay niid tu çeync may klooz.", phs: "Niid tu çeync.", tr: "Üstümü değiştirmem gerekiyor." },
-    { en: "I lost my bow tie. Do you have any extra one?", alt: "Lost my bow tie. Have one?", ph: "Ay lost may boo tay. Duu yu hav eni ekstrı van?", phs: "Lost my boo tay. Hev van?", tr: "Papyonumu kaybettim." }
+    { en: "I lost my bow tie. Do you have any extra one?", alt: "Lost my bow tie. Have one?", ph: "Ay lost may boo tay. Duu yu hav eni ekstrı van?", phs: "Lost my boo tay. Hev van?", tr: "Papyonumu kaybettim." },
   ],
   d2_ring: [
     { en: "The canvas needs to be fixed.", alt: "", ph: "Dı kenvıs niidz tu bi fikst.", phs: "", tr: "Zemin kaplaması düzeltilmeli." },
     { en: "The ropes are loose.", alt: "Loose ropes.", ph: "Dı roops ar luus.", phs: "Luus roops.", tr: "İpler gevşek." },
     { en: "The canvas needs to be cleaned.", alt: "Canvas is dirty.", ph: "Dı kenvıs niidz tu bi kliind.", phs: "Kenvıs iz dörti.", tr: "Ring zemininin temizlenmesi gerekiyor." },
     { en: "The ropes need to be cleaned.", alt: "Ropes are dirty.", ph: "Dı roops niid tu bi kliind.", phs: "Roops ar dörti.", tr: "İplerin temizlenmesi gerekiyor." },
-    { en: "The canvas is too wet and slippery.", alt: "Slippery canvas.", ph: "Dı kenvıs iz tuu vet end slipıri.", phs: "Slipıri kenvıs.", tr: "Ring zemini çok ıslak, kayıyor." }
+    { en: "The canvas is too wet and slippery.", alt: "Slippery canvas.", ph: "Dı kenvıs iz tuu vet end slipıri.", phs: "Slipıri kenvıs.", tr: "Ring zemini çok ıslak, kayıyor." },
   ],
   d2_ekipman: [
     { en: "Only IFMA approved gloves are allowed.", alt: "IFMA gloves only.", ph: "Onli IFMA ıpruuvd glavz ar ılaud.", phs: "IFMA glavz onli.", tr: "Sadece IFMA onaylı eldivenlere izin verilir." },
@@ -105,7 +105,7 @@ window.DAY2_PHRASES = {
     { en: "This headguard is not acceptable. Please change it.", alt: "Not acceptable. Change, please.", ph: "Dis hedgard iz not akseptıbıl. Pliiz çeync it.", phs: "Not akseptıbıl. Çeync pliiz.", tr: "Bu kask uygun değil." },
     { en: "These shorts are not approved. Please change them.", alt: "Not approved. Change, please.", ph: "Diiz şorts ar not ıpruuvd. Pliiz çeync dem.", phs: "Not ıpruuvd. Çeync pliiz.", tr: "Bu şort onaylı değil." },
     { en: "This shirt is not approved. Please change it.", alt: "Not approved. Change, please.", ph: "Dis şört iz not ıpruuvd. Pliiz çeync it.", phs: "Not ıpruuvd. Çeync pliiz.", tr: "Bu tişört onaylı değil." },
-    { en: "This bandage is not acceptable. Please change it.", alt: "Not acceptable. Change, please.", ph: "Dis bandıc iz not akseptıbıl. Pliiz çeync it.", phs: "Not akseptıbıl. Çeync pliiz.", tr: "Bu bandaj uygun değil." }
+    { en: "This bandage is not acceptable. Please change it.", alt: "Not acceptable. Change, please.", ph: "Dis bandıc iz not akseptıbıl. Pliiz çeync it.", phs: "Not akseptıbıl. Çeync pliiz.", tr: "Bu bandaj uygun değil." },
   ],
   d2_kose: [
     { en: "Only sports shoes are allowed.", alt: "Sports shoes only.", ph: "Onli sports şuuz ar ılaud.", phs: "Sports şuuz onli.", tr: "Sadece spor ayakkabıya izin verilir." },
@@ -125,7 +125,7 @@ window.DAY2_PHRASES = {
     { en: "Tape the shin guards.", alt: "Tape the shin guards.", ph: "Teyp dı şin gardz.", phs: "Teyp dı şin gardz.", tr: "Kaval koruyucuları bantlayın." },
     { en: "Please remove the towel.", alt: "Towel away.", ph: "Pliiz rimuuv dı tauıl.", phs: "Tauıl evey.", tr: "Lütfen havluyu kaldırın." },
     { en: "Please lean over the ropes.", alt: "Over the ropes.", ph: "Pliiz liin ovır dı roops.", phs: "Ovır dı roops.", tr: "Lütfen iplerden dışarı eğilin." },
-    { en: "The gum shield colour is not correct. It must be red or pink. Please change it.", alt: "Wrong colour. Change it.", ph: "Dı gam şiild kalır iz not korekt. İt mast bi red or pink. Pliiz çeync it.", phs: "Rong kalır. Çeync it.", tr: "Dişlik rengi doğru değil. Kırmızı veya pembe olmalı." }
+    { en: "The gum shield colour is not correct. It must be red or pink. Please change it.", alt: "Wrong colour. Change it.", ph: "Dı gam şiild kalır iz not korekt. İt mast bi red or pink. Pliiz çeync it.", phs: "Rong kalır. Çeync it.", tr: "Dişlik rengi doğru değil. Kırmızı veya pembe olmalı." },
   ],
   d2_orta: [
     { en: "Red, Blue, come to the center. Shake hands. Good luck. To your corners.", alt: "Center. Shake hands. Good luck. To your corners.", ph: "Red, Bluu, kam tu dı sentır. Şeyk hendz. Gud lak. Tu yor kornırs.", phs: "Sentır. Şeyk hendz. Gud lak. Tu yor kornırs.", tr: "Kırmızı, Mavi ortaya gelin." },
@@ -135,7 +135,7 @@ window.DAY2_PHRASES = {
     { en: "Will you continue?", alt: "Continue?", ph: "Vil yu kantinyu?", phs: "Kantinyu?", tr: "Devam edecek misin?" },
     { en: "Do you not want to continue?", alt: "You don't want?", ph: "Duu yu not vant tu kantinyu?", phs: "Yu doont vant?", tr: "Devam etmek istemiyor musun?" },
     { en: "Stop the time.", alt: "TIME.", ph: "Sıtop dı taym.", phs: "TAYM.", tr: "Zamanı durdur." },
-    { en: "Start the 2 minutes.", alt: "2 minutes.", ph: "Sırart dı tu minıts.", phs: "Tu minıts.", tr: "2 dakikayı başlat." }
+    { en: "Start the 2 minutes.", alt: "2 minutes.", ph: "Sırart dı tu minıts.", phs: "Tu minıts.", tr: "2 dakikayı başlat." },
   ],
   d2_uyari: [
     { en: "This is your first caution.", alt: "First caution.", ph: "Dis iz yor ferst kooşın.", phs: "Ferst kooşın.", tr: "Bu sana ilk uyarım." },
@@ -171,7 +171,7 @@ window.DAY2_PHRASES = {
     { en: "No knees to the head.", alt: "No knee to head.", ph: "Noo niiz tu dı hed.", phs: "Noo nii tu hed.", tr: "Kafaya diz yasaktır." },
     { en: "No elbows to the head.", alt: "No elbow to head.", ph: "Noo elbooz tu dı hed.", phs: "Noo elboo tu hed.", tr: "Kafaya dirsek yasaktır." },
     { en: "No strikes to the head.", alt: "No strike to head.", ph: "Noo strayks tu dı hed.", phs: "Noo strayk tu hed.", tr: "Kafaya vuruş yasaktır." },
-    { en: "No strikes to the face.", alt: "No strike to face.", ph: "Noo strayks tu dı feys.", phs: "Noo strayk tu feys.", tr: "Yüze vuruş yasaktır." }
+    { en: "No strikes to the face.", alt: "No strike to face.", ph: "Noo strayks tu dı feys.", phs: "Noo strayk tu feys.", tr: "Yüze vuruş yasaktır." },
   ],
   d2_ceza: [
     { en: "Warning for unsportsmanlike behaviour.", alt: "[Colour], Warning, Unsportsmanlike.", ph: "Vorning for ansportsmınlayk biheyvyır.", phs: "[Reng] Vorning, Ansportsmınlayk.", tr: "Sportmenlik dışı davranış — Ceza (Warning)." },
@@ -184,7 +184,7 @@ window.DAY2_PHRASES = {
     { en: "Warning for spitting.", alt: "[Colour], Warning, Spitting.", ph: "Vorning for spiting.", phs: "[Reng] Vorning, Spiting.", tr: "Tükürme — Ceza (Warning)." },
     { en: "Warning for knee to the head.", alt: "[Colour], Warning, Knee to head.", ph: "Vorning for nii tu dı hed.", phs: "[Reng] Vorning, Nii tu hed.", tr: "Kafaya diz — Ceza (Warning)." },
     { en: "Warning for elbow to the head.", alt: "[Colour], Warning, Elbow to head.", ph: "Vorning for elboo tu dı hed.", phs: "[Reng] Vorning, Elboo tu hed.", tr: "Kafaya dirsek — Ceza (Warning)." },
-    { en: "Warning for strike to the head.", alt: "[Colour], Warning, Strike to head.", ph: "Vorning for strayk tu dı hed.", phs: "[Reng] Vorning, Strayk tu hed.", tr: "Yasak kafaya vuruş — Ceza (Warning)." }
+    { en: "Warning for strike to the head.", alt: "[Colour], Warning, Strike to head.", ph: "Vorning for strayk tu dı hed.", phs: "[Reng] Vorning, Strayk tu hed.", tr: "Yasak kafaya vuruş — Ceza (Warning)." },
   ],
   d2_karar: [
     { en: "WP — Win on Points", alt: "Winner is Red/Blue.", ph: "Dabıl-yu Pii — Vin on Poynts", phs: "Vinır iz Red / Bluu.", tr: "Puanla Kazanma" },
@@ -199,19 +199,19 @@ window.DAY2_PHRASES = {
     { en: "DQ — Disqualification", alt: "Winner is Red/Blue.", ph: "Dii Kyuu — Diskuolıfikeyşın", phs: "Vinır iz Red / Bluu.", tr: "Diskalifiye" },
     { en: "WO — Walk Over", alt: "Winner is Red/Blue.", ph: "Dabıl-yu Oo — Vook Ovır", phs: "Vinır iz Red / Bluu.", tr: "Hükmen Galibiyet" },
     { en: "DRAW — No winner.", alt: "Draw.", ph: "Dıraav — Noo Vinır.", phs: "Dıraav.", tr: "Beraberlik — Kazanan yok" },
-    { en: "NC — No Contest", alt: "No contest.", ph: "En Sii — Noo Kontest.", phs: "Noo kontest.", tr: "Geçersiz Maç" }
+    { en: "NC — No Contest", alt: "No contest.", ph: "En Sii — Noo Kontest.", phs: "Noo kontest.", tr: "Geçersiz Maç" },
   ],
   d2_doktor: [
     { en: "Can the athlete continue?", alt: "Can he continue?", ph: "Kan dı esliit kantinyu?", phs: "Kan hi kantinyu?", tr: "Sporcu devam edebilir mi?" },
     { en: "What is the situation?", alt: "What's the situation?", ph: "Vat iz dı siçueyşın?", phs: "Vats dı siçueyşın?", tr: "Durum nedir?" },
     { en: "Please do not enter the ring.", alt: "Don't enter the ring.", ph: "Pliiz duu not entır dı ring.", phs: "Doont entır dı ring.", tr: "Ringe girmeyin." },
-    { en: "You may enter the ring.", alt: "Enter the ring.", ph: "Yu mey entır dı ring.", phs: "Entır dı ring.", tr: "Ringe girebilirsiniz." }
+    { en: "You may enter the ring.", alt: "Enter the ring.", ph: "Yu mey entır dı ring.", phs: "Entır dı ring.", tr: "Ringe girebilirsiniz." },
   ],
   d2_tayca: [],
   d2_yan: [
     { en: "The scorecard is finished.", alt: "No scorecards left.", ph: "Dı skoorkard iz finişt.", phs: "Noo skoorkard left.", tr: "Skor kartı bitti." },
     { en: "I need a pen, please.", alt: "Pen, please.", ph: "Ay niid ey pen, pliiz.", phs: "Pen, pliiz.", tr: "Kaleme ihtiyacım var." },
-    { en: "Please step back.", alt: "Step back.", ph: "Pliiz step bek.", phs: "Step bek.", tr: "Lütfen geriye gidiniz." }
+    { en: "Please step back.", alt: "Step back.", ph: "Pliiz step bek.", phs: "Step bek.", tr: "Lütfen geriye gidiniz." },
   ],
   d2_skor: [
     { en: "I am pressing the button.", alt: "I'm pressing.", ph: "Ay em presıng dı batın.", phs: "Aym presıng.", tr: "Butona basıyorum." },
@@ -220,13 +220,13 @@ window.DAY2_PHRASES = {
     { en: "I reset the score by mistake.", alt: "", ph: "Ay riiset dı skoor bay misteyk.", phs: "", tr: "Yanlışlıkla skoru resetledim." },
     { en: "The cable came out.", alt: "Cable unplugged.", ph: "Dı keybıl keym aut.", phs: "Keybıl anplagd.", tr: "Kablo çıktı." },
     { en: "I gave the point to the wrong corner.", alt: "Wrong corner point.", ph: "Ay geyv dı poynt tu dı rong kornır.", phs: "Rong kornır poynt.", tr: "Yanlış köşeye puan verdim." },
-    { en: "Everything is okay.", alt: "All good.", ph: "Evriting iz okey.", phs: "Ol gud.", tr: "Her şey yolunda." }
+    { en: "Everything is okay.", alt: "All good.", ph: "Evriting iz okey.", phs: "Ol gud.", tr: "Her şey yolunda." },
   ],
   d2_zaman: [
     { en: "The system has stopped.", alt: "System stopped.", ph: "Dı sistım haz stopt.", phs: "Sistım stopt.", tr: "Sistem durdu." },
     { en: "There is no sound.", alt: "No sound.", ph: "Der iz noo saund.", phs: "Noo saund.", tr: "Ses gelmiyor." },
     { en: "I stopped the time.", alt: "Time stopped.", ph: "Ay stopt dı taym.", phs: "Taym stopt.", tr: "Zamanı durdurdum." },
-    { en: "I started the time.", alt: "Time started.", ph: "Ay staartıd dı taym.", phs: "Taym staartıd.", tr: "Zamanı başlattım." }
+    { en: "I started the time.", alt: "Time started.", ph: "Ay staartıd dı taym.", phs: "Taym staartıd.", tr: "Zamanı başlattım." },
   ],
   d2_anons: [
     { en: "Next bout, red corner [Name] from [Country], blue corner [Name] from [Country], please get ready.", alt: "Next bout, get ready.", ph: "Nekst baut, red kornır [Neym] fram [Kantri], bluu kornır [Neym] fram [Kantri], pliiz get redi.", phs: "Nekst baut, get redi.", tr: "Bir sonraki maçın sporcuları hazırlansın." },
@@ -236,28 +236,28 @@ window.DAY2_PHRASES = {
     { en: "The winner is the red corner.", alt: "Winner, red corner.", ph: "Dı vinır iz dı red kornır.", phs: "Vinır, red kornır.", tr: "Kazanan kırmızı köşe." },
     { en: "The winner is the blue corner.", alt: "Winner, blue corner.", ph: "Dı vinır iz dı bluu kornır.", phs: "Vinır, bluu kornır.", tr: "Kazanan mavi köşe." },
     { en: "The bouts are paused for one hour.", alt: "One hour break.", ph: "Dı bauts ar paazd for van auır.", phs: "Van auır breyk.", tr: "Maçlara bir saat ara verilmiştir." },
-    { en: "Seconds out!", alt: "Seconds out!", ph: "Sekındz aut!", phs: "Sekındz aut!", tr: "Yardımcılar dışarı!" }
-  ]
+    { en: "Seconds out!", alt: "Seconds out!", ph: "Sekındz aut!", phs: "Sekındz aut!", tr: "Yardımcılar dışarı!" },
+  ],
 };
 
 window.DAY2_SECTIONS = [
   { id: "d2_juri_rap", label: "Raporlama (Reporting)" },
   { id: "d2_juri_diy", label: "Genel İletişim (Communication)" },
   { id: "d2_juri_gov", label: "Görevlendirme (Assignment)" },
-  { id: "d2_hakem", label: "Hakem Sağlık (Referee Health)" },
-  { id: "d2_ring", label: "Ring" },
-  { id: "d2_ekipman", label: "Ekipman Kontrolü (Equipment Check)" },
-  { id: "d2_kose", label: "Köşe Görevlisi (Second)" },
-  { id: "d2_orta", label: "Komutlar (Referee Commands)" },
-  { id: "d2_uyari", label: "Uyarılar (Cautions)" },
-  { id: "d2_ceza", label: "Cezalar (Warnings)" },
-  { id: "d2_karar", label: "Kararlar (Decisions)" },
-  { id: "d2_doktor", label: "Doktor (Doctor)" },
-  { id: "d2_tayca", label: "Tayca Sayma (Thai Count)" },
-  { id: "d2_yan", label: "Yan Hakem (Judge)" },
-  { id: "d2_skor", label: "Skorlama (Scoring System)" },
-  { id: "d2_zaman", label: "Zaman Hakemi (Timekeeper)" },
-  { id: "d2_anons", label: "Anons Hakemi (Announcer)" }
+  { id: "d2_hakem",     label: "Hakem Sağlık (Referee Health)" },
+  { id: "d2_ring",      label: "Ring" },
+  { id: "d2_ekipman",  label: "Ekipman Kontrolü (Equipment Check)" },
+  { id: "d2_kose",     label: "Köşe Görevlisi (Second)" },
+  { id: "d2_orta",     label: "Komutlar (Referee Commands)" },
+  { id: "d2_uyari",    label: "Uyarılar (Cautions)" },
+  { id: "d2_ceza",     label: "Cezalar (Warnings)" },
+  { id: "d2_karar",    label: "Kararlar (Decisions)" },
+  { id: "d2_doktor",   label: "Doktor (Doctor)" },
+  { id: "d2_tayca",    label: "Tayca Sayma (Thai Count)" },
+  { id: "d2_yan",      label: "Yan Hakem (Judge)" },
+  { id: "d2_skor",     label: "Skorlama (Scoring System)" },
+  { id: "d2_zaman",    label: "Zaman Hakemi (Timekeeper)" },
+  { id: "d2_anons",    label: "Anons Hakemi (Announcer)" },
 ];
 
 window.QUIZ_JURY = [
@@ -333,30 +333,30 @@ window.QUIZ_EQUIPMENT = [
 ];
 
 window.QUIZ_JUDGE = [
-  { sit: "**EN: A media staff or photographer gets too close to your judging table or blocks your view. Tell them to move behind.**\nTR: Medya görevlisi fark etmeden Yan Hakem masasına çok yaklaştı veya önüne geçti. Geri gitmesini söylüyorsun.", opts: ["A. Please step back/move.", "B. No scorecards left.", "C. The scorecard is finished.", "D. I need a pen, please."], c: 0 },
-  { sit: "**EN: You used your last paper scorecard. Inform the jury about the situation.**\nTR: Masada skor kartı kalmadı. Jüriyi bilgilendiriyorsun.", opts: ["A. I need a pen, please.", "B. The scorecard is finished.", "C. No scorecards left.", "D. Everything is okay."], c: 2 },
-  { sit: "**EN: You cannot find your pen. Request one from the jury.**\nTR: Kalemini bulamıyorsun. Jüriden rica ediyorsun.", opts: ["A. I need a pen, please.", "B. Everything is okay.", "C. The scorecard is finished.", "D. I am pressing the button."], c: 0 },
-  { sit: "**EN: There is a technical glitch on the scoreboard and the Jury asks if your device is responding. Inform them that you are active.**\nTR: Skor ekranında teknik bir sorun var ve jüri cihazınızın yanıt verip vermediğini soruyor. Jüriye butona bastığını bildiriyorsun.", opts: ["A. I am pressing the button.", "B. I did not press the button.", "C. I need a pen, please.", "D. I pressed the wrong button."], c: 0 },
-  { sit: "**EN: During the system check, you want to state that you haven't touched your scoring button.**\nTR: Cihaz kontrolü gerçekleştirilirken butona basmadığını bildiriyorsun.", opts: ["A. I am pressing the button.", "B. I did not press the button.", "C. I pressed the wrong button.", "D. I reset the score by mistake."], c: 1 },
-  { sit: "**EN: During the system check, you accidentally hit the wrong button. Inform the Jury.**\nTR: Cihaz kontrolü gerçekleştirirken yanlış butona bastın ve bunu Jüriye bildir.", opts: ["A. I pressed the wrong button.", "B. I gave the point to the wrong corner.", "C. I reset the score by mistake.", "D. The cable came out."], c: 0 },
-  { sit: "**EN: Your finger slips during the active round and you hit the reset option by accident. Inform the jury.**\nTR: Maç esnasında yanlışlıkla resetleme tuşuna bastın. Jüriyi bilgilendiriyorsun.", opts: ["A. I pressed the wrong button.", "B. I reset the score by mistake.", "C. I did not press the button.", "D. Everything is okay."], c: 1 },
-  { sit: "**EN: Your electronic scoring pad not working because the connection wire is pulled. Inform the Jüri immediately.**\nTR: Maç esnasında cihazın fişi/kablosu çıktığı için çalışmıyor. Jüriye derhal bilgi veriyorsun.", opts: ["A. The cable came out/Cable unplugged.", "B. Everything is okay.", "C. I did not press the button.", "D. I reset the score by mistake."], c: 0 },
-  { sit: "**EN: You meant to give the round to the red corner but accidentally clicked the blue corner's button. Report the error.**\nTR: Maç esnasında yanlış köşeye puan bastın. Bunu bildiriyorsun.", opts: ["A. The cable came out/Cable unplugged.", "B. Everything is okay.", "C. I did not press the button.", "D. I gave the point to the wrong corner."], c: 3 },
-  { sit: "**EN: The Jury asks if your electronic pad is working correctly now after the system check. Confirm that there are no issues.**\nTR: Sistem kontrolünden sonra Jüri cihazının çalışıp çalışmadığını soruyor. Her şeyin yolunda olduğunu bildiriyorsun.", opts: ["A. Everything is okay.", "B. I did not press the button.", "C. I am pressing the button.", "D. The scorecard is finished."], c: 0 }
+  { en: "A media staff or photographer gets too close to your judging table or blocks your view. Tell them to move behind.**\nTR: Medya görevlisi fark etmeden Yan Hakem masasına çok yaklaştı veya önüne geçti. Geri gitmesini söylüyorsun.", opts: ["A. Please step back/move.", "B. No scorecards left.", "C. The scorecard is finished.", "D. I need a pen, please."], c: 0 },
+  { en: "You used your last paper scorecard. Inform the jury about the situation.**\nTR: Masada skor kartı kalmadı. Jüriyi bilgilendiriyorsun.", opts: ["A. I need a pen, please.", "B. The scorecard is finished.", "C. No scorecards left.", "D. Everything is okay."], c: 2 },
+  { en: "You cannot find your pen. Request one from the jury.**\nTR: Kalemini bulamıyorsun. Jüriden rica ediyorsun.", opts: ["A. I need a pen, please.", "B. Everything is okay.", "C. The scorecard is finished.", "D. I am pressing the button."], c: 0 },
+  { en: "There is a technical glitch on the scoreboard and the Jury asks if your device is responding. Inform them that you are active.**\nTR: Skor ekranında teknik bir sorun var ve jüri cihazınızın yanıt verip vermediğini soruyor. Jüriye butona bastığını bildiriyorsun.", opts: ["A. I am pressing the button.", "B. I did not press the button.", "C. I need a pen, please.", "D. I pressed the wrong button."], c: 0 },
+  { en: "During the system check, you want to state that you haven't touched your scoring button.**\nTR: Cihaz kontrolü gerçekleştirilirken butona basmadığını bildiriyorsun.", opts: ["A. I am pressing the button.", "B. I did not press the button.", "C. I pressed the wrong button.", "D. I reset the score by mistake."], c: 1 },
+  { en: "During the system check, you accidentally hit the wrong button. Inform the Jury.**\nTR: Cihaz kontrolü gerçekleştirirken yanlış butona bastın ve bunu Jüriye bildir.", opts: ["A. I pressed the wrong button.", "B. I gave the point to the wrong corner.", "C. I reset the score by mistake.", "D. The cable came out."], c: 0 },
+  { en: "Your finger slips during the active round and you hit the reset option by accident. Inform the jury.**\nTR: Maç esnasında yanlışlıkla resetleme tuşuna bastın. Jüriyi bilgilendiriyorsun.", opts: ["A. I pressed the wrong button.", "B. I reset the score by mistake.", "C. I did not press the button.", "D. Everything is okay."], c: 1 },
+  { en: "Your electronic scoring pad not working because the connection wire is pulled. Inform the Jüri immediately.**\nTR: Maç esnasında cihazın fişi/kablosu çıktığı için çalışmıyor. Jüriye derhal bilgi veriyorsun.", opts: ["A. The cable came out/Cable unplugged.", "B. Everything is okay.", "C. I did not press the button.", "D. I reset the score by mistake."], c: 0 },
+  { en: "You meant to give the round to the red corner but accidentally clicked the blue corner's button. Report the error.**\nTR: Maç esnasında yanlış köşeye puan bastın. Bunu bildiriyorsun.", opts: ["A. The cable came out/Cable unplugged.", "B. Everything is okay.", "C. I did not press the button.", "D. I gave the point to the wrong corner."], c: 3 },
+  { en: "The Jury asks if your electronic pad is working correctly now after the system check. Confirm that there are no issues.**\nTR: Sistem kontrolünden sonra Jüri cihazının çalışıp çalışmadığını soruyor. Her şeyin yolunda olduğunu bildiriyorsun.", opts: ["A. Everything is okay.", "B. I did not press the button.", "C. I am pressing the button.", "D. The scorecard is finished."], c: 0 }
 ];
 
 window.QUIZ_TIMEKEEPER = [
-  { sit: "**EN: The Rsportz system freezes during the round. Inform the Jury immediately.**\nTR: Maç esnasında Rsportz sistemi dondu. Jüriye derhal bilgi veriyorsun.", opts: ["A. I stopped the time.", "B. The system has stopped/System stopped.", "C. No sound.", "D. I started the time."], c: 1 },
-  { sit: "**EN: You started playing the Wai Kru music on the computer but no audio comes out of the speakers. Report the issue.**\nTR: Wai Kru müziğini bilgisayardan başlattın ama hoparlörlerinden ses gelmiyor. Durumu bildiriyorsun.", opts: ["A. The system has stopped.", "B. I stopped the time.", "C. There is no sound/No sound.", "D. The winner is the blue corner."], c: 2 },
-  { sit: "**EN: The referee commands TIME for an equipment fix. Confirm that you paused the official clock.**\nTR: Orta hakem bir ekipman düzeltmesi için TIME komutu verdi. Resmi süreyi durdurduğunu onaylıyorsun.", opts: ["A. I started the time.", "B. The system has stopped.", "C. I stopped the time.", "D. There is no sound/No sound."], c: 2 },
-  { sit: "**EN: The referee commands \"CHOK\" (Fight) to resume the action. Confirm that you restarted the clock.**\nTR: Orta hakem maçı yeniden başlatmak için \"ÇOK\" (Dövüş) komutu verdi. Süreyi tekrar başlattığını onaylıyorsun.", opts: ["A. I started the time.", "B. The system has stopped.", "C. I stopped the time.", "D. There is no sound/No sound."], c: 0 }
+  { en: "The Rsportz system freezes during the round. Inform the Jury immediately.**\nTR: Maç esnasında Rsportz sistemi dondu. Jüriye derhal bilgi veriyorsun.", opts: ["A. I stopped the time.", "B. The system has stopped/System stopped.", "C. No sound.", "D. I started the time."], c: 1 },
+  { en: "You started playing the Wai Kru music on the computer but no audio comes out of the speakers. Report the issue.**\nTR: Wai Kru müziğini bilgisayardan başlattın ama hoparlörlerinden ses gelmiyor. Durumu bildiriyorsun.", opts: ["A. The system has stopped.", "B. I stopped the time.", "C. There is no sound/No sound.", "D. The winner is the blue corner."], c: 2 },
+  { en: "The referee commands TIME for an equipment fix. Confirm that you paused the official clock.**\nTR: Orta hakem bir ekipman düzeltmesi için TIME komutu verdi. Resmi süreyi durdurduğunu onaylıyorsun.", opts: ["A. I started the time.", "B. The system has stopped.", "C. I stopped the time.", "D. There is no sound/No sound."], c: 2 },
+  { en: "The referee commands \"CHOK\" (Fight) to resume the action. Confirm that you restarted the clock.**\nTR: Orta hakem maçı yeniden başlatmak için \"ÇOK\" (Dövüş) komutu verdi. Süreyi tekrar başlattığını onaylıyorsun.", opts: ["A. I started the time.", "B. The system has stopped.", "C. I stopped the time.", "D. There is no sound/No sound."], c: 0 }
 ];
 
 window.QUIZ_ANNOUNCER = [
-  { sit: "**EN: Prepare the upcoming fighters by announcing that they should get ready.**\nTR: Sıradaki maçın sporcularına hazır olmaları gerektiğini anons ediyorsun.", opts: ["A. Next bout, red corner [Name] from [Country], blue corner [Name] from [Country], please get ready.", "B. Ring A, Bout number 2, red corner [Name] from [Country] to the ring area!", "C. This is the final call!", "D. Seconds out!"], c: 0 },
-  { sit: "**EN: Call the red corner athlete of the second bout in Ring A to enter the ring area immediately.**\nTR: A ringindeki 2. maçın kırmızı köşe sporcusunu derhal ring alanına çağırıyorsun.", opts: ["A. Ring B, Bout number 3, blue corner [Name] from [Country] to the ring area!", "B. Next bout, red corner [Name] from [Country], blue corner [Name] from [Country], please get ready.", "C. Ring A, Bout number 2, red corner [Name] from [Country] to the ring area!", "D. The winner is the red corner."], c: 2 },
-  { sit: "**EN: An athlete has not shown up after the announcements. Make the definitive warning before Walk-Over.**\nTR: Bir sporcu yapılan anonslara rağmen gelmedi. Walk-Over öncesindeki son çağrıyı yapıyorsun.", opts: ["A. The bouts are paused for one hour.", "B. Next bout, get ready.", "C. The winner is the blue corner.", "D. Final call!"], c: 3 },
-  { sit: "**EN: The official decision is handed to you. Announce the victory of the blue corner.**\nTR: Resmi karar sana ulaştı. Mavi köşenin kazandığını anons ediyorsun.", opts: ["A. The winner is the red corner.", "B. The winner is the blue corner.", "C. Final call!", "D. Next bout, get ready."], c: 1 },
-  { sit: "**EN: The Technical Delegate decides to take a official lunch break. Announce the schedule pause.**\nTR: Teknik Delege resmi bir öğle arası verme kararı aldı. Seansa ara verildiğini anons ediyorsun.", opts: ["A. The bouts are paused for one hour.", "B. Please lean over the ropes.", "C. Next bout, get ready.", "D. This is the final call!"], c: 0 },
-  { sit: "**EN: The one-minute break is ending, and the next round is about to start. Order the seconds to leave the canvas.**\nTR: Bir dakikalık mola bitiyor ve yeni raund başlamak üzere. Köşe görevlilerinin ringden dışarı çıkmasını söylüyorsun.", opts: ["A. Please lean over the ropes.", "B. Seconds out!", "C. Please remove the towel.", "D. Step back."], c: 1 }
+  { en: "Prepare the upcoming fighters by announcing that they should get ready.**\nTR: Sıradaki maçın sporcularına hazır olmaları gerektiğini anons ediyorsun.", opts: ["A. Next bout, red corner [Name] from [Country], blue corner [Name] from [Country], please get ready.", "B. Ring A, Bout number 2, red corner [Name] from [Country] to the ring area!", "C. This is the final call!", "D. Seconds out!"], c: 0 },
+  { en: "Call the red corner athlete of the second bout in Ring A to enter the ring area immediately.**\nTR: A ringindeki 2. maçın kırmızı köşe sporcusunu derhal ring alanına çağırıyorsun.", opts: ["A. Ring B, Bout number 3, blue corner [Name] from [Country] to the ring area!", "B. Next bout, red corner [Name] from [Country], blue corner [Name] from [Country], please get ready.", "C. Ring A, Bout number 2, red corner [Name] from [Country] to the ring area!", "D. The winner is the red corner."], c: 2 },
+  { en: "An athlete has not shown up after the announcements. Make the definitive warning before Walk-Over.**\nTR: Bir sporcu yapılan anonslara rağmen gelmedi. Walk-Over öncesindeki son çağrıyı yapıyorsun.", opts: ["A. The bouts are paused for one hour.", "B. Next bout, get ready.", "C. The winner is the blue corner.", "D. Final call!"], c: 3 },
+  { en: "The official decision is handed to you. Announce the victory of the blue corner.**\nTR: Resmi karar sana ulaştı. Mavi köşenin kazandığını anons ediyorsun.", opts: ["A. The winner is the red corner.", "B. The winner is the blue corner.", "C. Final call!", "D. Next bout, get ready."], c: 1 },
+  { en: "The Technical Delegate decides to take a official lunch break. Announce the schedule pause.**\nTR: Teknik Delege resmi bir öğle arası verme kararı aldı. Seansa ara verildiğini anons ediyorsun.", opts: ["A. The bouts are paused for one hour.", "B. Please lean over the ropes.", "C. Next bout, get ready.", "D. This is the final call!"], c: 0 },
+  { en: "The one-minute break is ending, and the next round is about to start. Order the seconds to leave the canvas.**\nTR: Bir dakikalık mola bitiyor ve yeni raund başlamak üzere. Köşe görevlilerinin ringden dışarı çıkmasını söylüyorsun.", opts: ["A. Please lean over the ropes.", "B. Seconds out!", "C. Please remove the towel.", "D. Step back."], c: 1 }
 ];
