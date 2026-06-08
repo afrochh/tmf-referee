@@ -3,6 +3,7 @@ window.QUIZ_TIMEKEEPER = window.QUIZ_TIMEKEEPER || [];
 window.QUIZ_ANNOUNCER = window.QUIZ_ANNOUNCER || [];
 window.QUIZ_EQUIPMENT = window.QUIZ_EQUIPMENT || [];
 window.QUIZ_JUDGE = window.QUIZ_JUDGE || [];
+window.QUIZ_REFEREE = window.QUIZ_REFEREE || [];
 
 window.DAY2_PHRASES = {
   d2_juri_rap: [
@@ -360,3 +361,6 @@ window.QUIZ_ANNOUNCER = [
   { en: "The Technical Delegate decides to take a official lunch break. Announce the schedule pause.", tr: "Teknik Delege resmi bir öğle arası verme kararı aldı. Seansa ara verildiğini anons ediyorsun.", opts: ["A. The bouts are paused for one hour.", "B. Please lean over the ropes.", "C. Next bout, get ready.", "D. This is the final call!"], c: 0 },
   { en: "The one-minute break is ending, and the next round is about to start. Order the seconds to leave the canvas.", tr: "Bir dakikalık mola bitiyor ve yeni raund başlamak üzere. Köşe görevlilerinin ringden dışarı çıkmasını söylüyorsun.", opts: ["A. Please lean over the ropes.", "B. Seconds out!", "C. Please remove the towel.", "D. Step back."], c: 1 }
 ];
+window.QUIZ_REFEREE = [
+   { en: " Bring both athletes together just before start the bout, command them to show respect, wish them well and send them to their corners.", tr: " İlk raund başlamadan hemen önce her iki sporcuyu da ortaya çağırıyor, birbirlerine saygı göstermelerini söylüyor, başarılar diliyor ve köşelerine gönderiyorsun.", opts: ["A. Put on your headguard. Listen to my commands.", " B. Red, Blue, come to the center. Shake hands. Good luck. To your corners.", "C. Warning for unsportsmanlike behaviour.", " You must follow the YOOT or YAEK command immediately."], c: 1 },
+    ];
