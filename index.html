@@ -340,7 +340,8 @@ function renderQuiz() {
     const c = document.getElementById("content");
     let activeQuiz = window.DAY2_QUIZ;
 
-    if (curSec === "d2_senaryo_jury") activeQuiz = window.QUIZ_JURY;
+    if (curSec === "senaryo") activeQuiz = window.QUIZ_TARTI;
+    else if (curSec === "d2_senaryo_jury") activeQuiz = window.QUIZ_JURY;
     else if (curSec === "d2_senaryo_judge") activeQuiz = window.QUIZ_JUDGE;
     else if (curSec === "d2_senaryo_timekeeper") activeQuiz = window.QUIZ_TIMEKEEPER;
     else if (curSec === "d2_senaryo_announcer") activeQuiz = window.QUIZ_ANNOUNCER;
@@ -459,15 +460,18 @@ const NAV = {
               { id: "baskul", label: "Baskül Sorunları (Scale Issues)", leaf: true }
             ]
           }, 
+        ]
+      },
       {
         id: "social", label: "Sosyal İletişim (Socializing)",
         l3: [ { id: "sosyal", label: "Sosyal İletişim", leaf: true } ]
       },
       {
         id: "senaryo",  label: "▶ Senaryo Pratiği",
+        isQuiz: true, quizId: "senaryo"
       },
     ]
-  };
+ },
   
   day2: {
     label: "Müsabaka Alanı",
@@ -684,7 +688,7 @@ window.QUIZ_TARTI = [
   if(NAV[curDay] && NAV[curDay].l2 && NAV[curDay].l2.length > 0) {
       const firstL2 = NAV[curDay].l2[0]; curL2 = firstL2.id;
       buildL2(); initL2(firstL2);
-  }
+  };
 </script>
 </body>
 </html>
