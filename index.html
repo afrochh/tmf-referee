@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head><link rel="icon" type="image/png" href="assets/images/favicon.png">
+<link rel="manifest" href="manifest.json">
 <meta charset="UTF-8">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -95,6 +96,11 @@ body{
 .footer a{color:#185FA5;text-decoration:none}
 .footer a:hover{text-decoration:underline}
 </style>
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/tmf-referee/service-worker.js');
+  }
+</script>
 </head>
 <body>
 
