@@ -329,6 +329,96 @@ function renderPhrases() {
       </div>
     </div>`;
   }).join("");
+  
+  if (curSec === "d2_tayca") {
+  c.innerHTML += `
+  <div style="margin-top:16px;background:#fff;border:1px solid #e8e8e8;border-radius:12px;padding:16px">
+    <div style="font-size:13px;font-weight:600;color:#185FA5;margin-bottom:12px">⏱ Tayca Sayma Pratiği</div>
+    <div id="tc-display" style="background:#f0f4f9;border-radius:10px;padding:24px;text-align:center;min-height:160px;display:flex;flex-direction:column;align-items:center;justify-content:center;margin-bottom:10px">
+      <div id="tc-num" style="font-size:64px;font-weight:600;color:#185FA5;line-height:1">—</div>
+      <div id="tc-thai" style="font-size:24px;font-weight:600;color:#1a1a1a;margin-top:8px">Başlamak için ▶ bas</div>
+      <div id="tc-phonetic" style="font-size:14px;color:#4a90c4;margin-top:4px"></div>
+      <div id="tc-meaning" style="font-size:12px;color:#888;margin-top:2px"></div>
+    </div>
+    <div style="height:4px;background:#ddd;border-radius:2px;margin-bottom:12px;overflow:hidden">
+      <div id="tc-fill" style="height:100%;width:0%;background:#185FA5;border-radius:2px;transition:width 0.05s linear"></div>
+    </div>
+    <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+      <button id="tc-start" onclick="tcToggle()" class="sbtn" style="background:#185FA5;color:#fff;border-color:#185FA5">▶ Başlat</button>
+      <button onclick="tcReset()" class="sbtn">↺ Sıfırla</button>
+      <label style="display:flex;align-items:center;gap:6px;font-size:12px;color:#555">
+        <input type="checkbox" id="tc-loop"> Döngü
+      </label>
+    </div>
+  </div>`;
+
+  const TC_DATA = [
+    {num:1,thai:"NUENG",ph:"Nıng",tr:"Bir"},
+    {num:2,thai:"SONG", ph:"Song",tr:"İki"},
+    {num:3,thai:"SAAM", ph:"Saam",tr:"Üç"},
+    {num:4,thai:"SII",  ph:"Sii", tr:"Dört"},
+    {num:5,thai:"HAH",  ph:"Haa", tr:"Beş"},
+    {num:6,thai:"HOK",  ph:"Hok", tr:"Altı"},
+    {num:7,thai:"JED",  ph:"Cet", tr:"Yedi"},
+    {num:8,thai:"BAED", ph:"Pet", tr:"Sekiz"},
+    {num:9,thai:"KOUW", ph:"Kav", tr:"Dokuz"},
+    {num:10,thai:"SIB", ph:"Sip", tr:"On"},
+  ];
+
+  let tcIdx=0, tcRunning=false, tcTimer=null, tcProgTimer=null, tcElapsed=0;
+
+  window.tcToggle = function(){
+    if(tcRunning){
+      clearInterval(tcTimer); clearInterval(tcProgTimer);
+      tcRunning=false;
+      document.getElementById('tc-start').textContent='▶ Devam';
+    } else {
+      tcRunning=true;
+      document.getElementById('tc-start').textContent='⏸ Durdur';
+      tcTick();
+      tcTimer = setInterval(tcTick, 1000);
+    }
+  };
+
+  window.tcReset = function(){
+    clearInterval(tcTimer); clearInterval(tcProgTimer);
+    tcRunning=false; tcIdx=0;
+    document.getElementById('tc-num').textContent='—';
+    document.getElementById('tc-thai').textContent='Başlamak için ▶ bas';
+    document.getElementById('tc-phonetic').textContent='';
+    document.getElementById('tc-meaning').textContent='';
+    document.getElementById('tc-fill').style.width='0%';
+    document.getElementById('tc-start').textContent='▶ Başlat';
+  };
+
+  function tcTick(){
+    if(tcIdx >= TC_DATA.length){
+      clearInterval(tcTimer); clearInterval(tcProgTimer);
+      tcRunning=false;
+      document.getElementById('tc-fill').style.width='100%';
+      document.getElementById('tc-start').textContent='▶ Başlat';
+      if(document.getElementById('tc-loop').checked){
+        setTimeout(()=>{tcIdx=0; window.tcToggle();}, 800);
+      }
+      return;
+    }
+    const d = TC_DATA[tcIdx];
+    document.getElementById('tc-num').textContent = d.num;
+    document.getElementById('tc-thai').textContent = d.thai;
+    document.getElementById('tc-phonetic').textContent = d.ph;
+    document.getElementById('tc-meaning').textContent = d.tr;
+    const a = new Audio(`assets/audio/d2_tayca_${tcIdx+4}.mp3`);
+    a.play().catch(()=>{});
+    tcElapsed=0;
+    clearInterval(tcProgTimer);
+    document.getElementById('tc-fill').style.width='0%';
+    tcProgTimer = setInterval(()=>{
+      tcElapsed+=50;
+      document.getElementById('tc-fill').style.width = Math.min(100,Math.round(tcElapsed/1000*100))+'%';
+    },50);
+    tcIdx++;
+  }
+}
 }
 
 function renderQuiz() {
