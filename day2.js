@@ -114,7 +114,7 @@ window.DAY2_PHRASES = {
     { en: "You may put on the headguard.", alt: "Headguard on.", ph: "Yu mey put on dı hedgard.", phs: "Hedgard on.", tr: "Kaskı takabilirsiniz." },
     { en: "You may remove the headguard.", alt: "Headguard off.", ph: "Yu mey rimuuv dı hedgard.", phs: "Hedgard of.", tr: "Kaskı çıkarabilirsiniz." },
     { en: "Do not remove the gloves.", alt: "Gloves stay on.", ph: "Duu not rimuuv dı glavz.", phs: "Glavz stey on.", tr: "Eldivenleri çıkarmayın." },
-    { en: "Good luck.", alt: "Good luck.", ph: "Gud lak.", phs: "Gud lak.", tr: "Başarılar dilerim." },
+    { en: "Good luck.", alt: "", ph: "Gud lak.", phs: "", tr: "Başarılar dilerim." },
     { en: "Please take the water bottle.", alt: "Water bottle.", ph: "Pliiz teyk dı votır botıl.", phs: "Votır botıl.", tr: "Lütfen su şişesini alın." },
     { en: "Do not use too much water.", alt: "Less water.", ph: "Duu not yuuz tuu maç votır.", phs: "Les votır.", tr: "Çok fazla su kullanmayın." },
     { en: "Fix the elbow guard.", alt: "Fix the elbow guard.", ph: "Fiks dı elboo gard.", phs: "Fiks dı elboo gard.", tr: "Dirsekliği düzeltin." },
@@ -216,7 +216,7 @@ window.DAY2_PHRASES = {
   ],
   d2_skor: [
     { en: "I am pressing the button.", alt: "I'm pressing.", ph: "Ay em presıng dı batın.", phs: "Aym presıng.", tr: "Butona basıyorum." },
-    { en: "I did not press the button.", alt: "", ph: "Ay did not pres dı batın.", phs: "", tr: "Butona basmadım." },
+    { en: "I did not press the button.", alt: "I didn’t press the button.", ph: "Ay did not pres dı batın.", phs: "Aym didn’t pres dı batın.", tr: "Butona basmadım." },
     { en: "I pressed the wrong button.", alt: "", ph: "Ay prest dı rong batın.", phs: "", tr: "Butona yanlış bastım." },
     { en: "I reset the score by mistake.", alt: "", ph: "Ay riiset dı skoor bay misteyk.", phs: "", tr: "Yanlışlıkla skoru resetledim." },
     { en: "The cable came out.", alt: "Cable unplugged.", ph: "Dı keybıl keym aut.", phs: "Keybıl anplagd.", tr: "Kablo çıktı." },
@@ -237,7 +237,7 @@ window.DAY2_PHRASES = {
     { en: "The winner is the red corner.", alt: "Winner, red corner.", ph: "Dı vinır iz dı red kornır.", phs: "Vinır, red kornır.", tr: "Kazanan kırmızı köşe." },
     { en: "The winner is the blue corner.", alt: "Winner, blue corner.", ph: "Dı vinır iz dı bluu kornır.", phs: "Vinır, bluu kornır.", tr: "Kazanan mavi köşe." },
     { en: "The bouts are paused for one hour.", alt: "One hour break.", ph: "Dı bauts ar paazd for van auır.", phs: "Van auır breyk.", tr: "Maçlara bir saat ara verilmiştir." },
-    { en: "Seconds out!", alt: "Seconds out!", ph: "Sekındz aut!", phs: "Sekındz aut!", tr: "Yardımcılar dışarı!" },
+    { en: "Seconds out!", alt: "", ph: "Sekındz aut!", phs: "", tr: "Yardımcılar dışarı!" },
   ],
 };
 
