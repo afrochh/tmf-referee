@@ -137,7 +137,7 @@ function isScenario(id) {
 function playElevenLabsVoice(fileCode, selectElementId) {
   if (!fileCode) return;
   const speedSelect = document.getElementById(selectElementId);
-  const targetSpeed = speedSelect ? parseFloat(speedSelect.value) : 0.8;
+  const targetSpeed = speedSelect ? parseFloat(speedSelect.value) : 1.0;
 
   let cleanCode = fileCode.replace(".mp3", "");
   const audioPath = `assets/audio/${cleanCode}.mp3`;
@@ -322,8 +322,8 @@ function renderPhrases() {
           <span class="card-speed-label">HIZ:</span>
           <select class="card-speed-select" id="${selectId}">
             <option value="0.6">0.6x (Tane Tane)</option>
-            <option value="0.8" selected>0.8x (Dengeli)</option>
-            <option value="1.0">1.0x (Normal)</option>
+            <option value="0.8">0.8x (Dengeli)</option>
+            <option value="1.0" selected>1.0x (Normal)</option>
           </select>
         </div>
       </div>
@@ -412,12 +412,20 @@ function tcTick(){
   tcElapsed = 0;
   document.getElementById('tc-fill').style.width = '0%';
   clearInterval(tcProgTimer);
-  tcProgTimer = setInterval(()=>{
-    tcElapsed += 50;
-    document.getElementById('tc-fill').style.width = Math.min(100, Math.round(tcElapsed/1000*100))+'%';
-    if(tcElapsed >= 1000) clearInterval(tcProgTimer);
-  }, 50);
-  setTimeout(tcTick, 1000);
+
+  const a = new Audio(`assets/audio/d2_tayca_${tcIdx+3}.mp3`);
+  a.play().catch(()=>{});
+  
+  a.onended = function(){
+    tcProgTimer = setInterval(()=>{
+      tcElapsed += 50;
+      document.getElementById('tc-fill').style.width = Math.min(100, Math.round(tcElapsed/1000*100))+'%';
+      if(tcElapsed >= 1000){
+        clearInterval(tcProgTimer);
+        if(tcRunning) tcTick();
+      }
+    }, 50);
+  };
 }
 }
 }
@@ -494,8 +502,8 @@ fb.innerHTML = fbContent + `
       <span class="card-speed-label">HIZ:</span>
       <select class="card-speed-select" id="${quizSelectId}">
         <option value="0.6">0.6x (Tane Tane)</option>
-        <option value="0.8" selected>0.8x (Dengeli)</option>
-        <option value="1.0">1.0x (Normal)</option>
+        <option value="0.8">0.8x (Dengeli)</option>
+        <option value="1.0" selected>1.0x (Normal)</option>
       </select>
     </div>
   </div>
@@ -542,17 +550,28 @@ function startSpeech(encodedAns, quizSelectId) {
     const said = e.results[0][0].transcript.toLowerCase();
     result.innerHTML = `<span style="color:#555">Söylediğin: "<em>${said}</em>"</span><br>`;
     
-    const keywords = ans.replace(/[^a-z\s]/g, '').split(' ').filter(w => w.length > 2);
-    const matched = keywords.filter(w => said.includes(w));
-    const pct = Math.round(matched.length / keywords.length * 100);
-    
-    if (pct >= 70) {
-      result.innerHTML += `<span style="color:#3B6D11">✓ Harika! %${pct} doğru</span>`;
-    } else if (pct >= 40) {
-      result.innerHTML += `<span style="color:#BA7517">~ Yakın! %${pct} — tekrar dene</span>`;
-    } else {
-      result.innerHTML += `<span style="color:#A32D2D">✗ %${pct} — önce dinle, tekrar dene</span>`;
+    const keywords = ans.replace(/[^a-z\s]/g, '').split(' ').filter(w => w.length > 3);
+const matched = keywords.filter(w => {
+  if (said.includes(w)) return true;
+  // Fonetik benzerlik — kelime uzunluğu farkı 2'den az ise kabul et
+  return said.split(' ').some(sw => {
+    if (Math.abs(sw.length - w.length) > 2) return false;
+    let diff = 0;
+    for (let i = 0; i < Math.min(sw.length, w.length); i++) {
+      if (sw[i] !== w[i]) diff++;
     }
+    return diff <= 2;
+  });
+});
+const pct = Math.round(matched.length / keywords.length * 100);
+
+if (pct >= 50) {
+  result.innerHTML += `<span style="color:#3B6D11">✓ Harika! %${pct} doğru</span>`;
+} else if (pct >= 25) {
+  result.innerHTML += `<span style="color:#BA7517">~ Yakın! %${pct} — tekrar dene</span>`;
+} else {
+  result.innerHTML += `<span style="color:#A32D2D">✗ %${pct} — önce dinle, tekrar dene</span>`;
+}
     
     btn.textContent = '🎤 Tekrar Dene';
     btn.style.background = '';
