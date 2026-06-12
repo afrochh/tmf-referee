@@ -1,8 +1,9 @@
-const CACHE = "tmf-v7";
+const CACHE = "tmf-v8";
 const FILES = [
   "/tmf-referee/",
   "/tmf-referee/index.html",
   "/tmf-referee/day2.js",
+  "/tmf-referee/privacy.html",
   "/tmf-referee/manifest.json",
   "/tmf-referee/assets/images/favicon.png",
   "/tmf-referee/assets/audio/baskul_1.mp3",
