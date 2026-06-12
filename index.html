@@ -800,10 +800,15 @@ function renderQuiz() {
     else if (curSec === "d2_senaryo_equipment") activeQuiz = window.QUIZ_EQUIPMENT;
     else if (curSec === "d2_senaryo_referee") activeQuiz = window.QUIZ_REFEREE;
 
-    // 🔥 LİSTE KONTROLÜ VE İLK ANDA KAYDETME
+  // 🔥 LİSTE KONTROLÜ
     if (!shuffledQuiz || shuffledQuiz.length === 0) {
         shuffledQuiz = shuffle(activeQuiz);
-        saveQuizState(); // İlk karıştırmada listeyi hemen hafızaya kilitle!
+    }
+
+    // 🎯 SİHİRLİ DOKUNUŞ: Ekrana her yeni soru geldiğinde (veya soru değiştiğinde) 
+    // güncel soru numarasını ve skoru ANINDA otomatik olarak hafızaya yazıyoruz!
+    if (qIdx < shuffledQuiz.length) {
+        saveQuizState(); 
     }
 
     if (qIdx >= shuffledQuiz.length) { showDone(); return; }
@@ -989,9 +994,10 @@ function restartQuiz() {
   clearQuizState(); // 🧼 "Tekrar Başla" butonuna basıldığında da hafızayı sıfırlıyoruz
   renderQuiz(); 
 }
+
 function saveQuizState() {
-  localStorage.setItem('tmf_qIdx', qIdx);
-  localStorage.setItem('tmf_score', score);
+  localStorage.setItem('tmf_qIdx', qIdx.toString());
+  localStorage.setItem('tmf_score', score.toString());
   localStorage.setItem('tmf_curSec', curSec);
   localStorage.setItem('tmf_shuffledQuiz', JSON.stringify(shuffledQuiz));
 }
@@ -1253,7 +1259,7 @@ window.QUIZ_TARTI = [
 
 </script>
 
-<script src="./day2.js?v=24" charset="UTF-24"></script>
+<script src="./day2.js?v=25" charset="UTF-25"></script>
 
 <script>
   // ─── 6. RUNNING APPLICATION INITIALIZATION ───────────────────────
