@@ -826,8 +826,9 @@ const quizSesKodu = `quiz_${curSec}_${origIdx + 1}`;
 
   c.innerHTML = `
     <div class="q-bar">
-      <div class="q-pill">Skor: <b id="sc">${score}</b></div>
+      <div class="q-pill">Skor: <b id="sc">${parseInt(localStorage.getItem('tmf_score')) || 0}</b></div>
       <div class="q-pill">Soru: <b>${qIdx+1}</b>/${shuffledQuiz.length}</div>
+      
       <button class="q-pill" onclick="if(confirm('Mevcut ilerlemeniz silinecektir. En baştan başlamak istediğinize emin misiniz?')) restartQuiz();" style="background: #dc3545; color: white; border: none; cursor: pointer; border-radius: 20px; padding: 4px 10px; font-weight: bold; margin-left: 5px;">
         🗑️ Sıfırla
       </button>
@@ -857,7 +858,10 @@ const quizSesKodu = `quiz_${curSec}_${origIdx + 1}`;
 
 function checkAns(idx, correct, ex, ans, sesKodu, quizSelectId) {
   if (answered) return; answered = true;
-  if (idx === correct) score++;        // ← bunu ekle
+  if (idx === correct) {
+      score++;
+      localStorage.setItem('tmf_score', score.toString()); // 🎯 Doğru bildiği an hafızayı da hemen tazele!
+  }
   document.querySelectorAll(".opt").forEach((b,i) => {
     if (i===correct) b.classList.add("reveal");
     else if (i===idx && idx!==correct) b.classList.add("wrong");
@@ -1264,7 +1268,7 @@ window.QUIZ_TARTI = [
 
 </script>
 
-<script src="./day2.js?v=27" charset="UTF-27"></script>
+<script src="./day2.js?v=28" charset="UTF-28"></script>
 
 <script>
   // ─── 6. RUNNING APPLICATION INITIALIZATION ───────────────────────
