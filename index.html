@@ -357,6 +357,7 @@ if (localStorage.getItem('darkMode') === 'true') {
   });
 }
 // ─── 1. GLOBAL STATE DEFINITIONS ─────────────────────────────────
+let currentPlayingAudio = null; // 📲 Arka arkaya basıldığında donmayı engelleyen değişken
 let curDay = "day1";
 let curL2  = "registration";
 let curL3  = null;
@@ -371,16 +372,25 @@ function isScenario(id) {
 
 function playElevenLabsVoice(fileCode, selectElementId) {
   if (!fileCode) return;
+  
+  // 🚫 EĞER ÖNCEDEN ÇALAN BİR SES VARSA ONU DURDURUYORUZ
+  if (currentPlayingAudio) {
+    currentPlayingAudio.pause();
+    currentPlayingAudio.currentTime = 0; // Süreyi başa sar
+  }
+
   const speedSelect = document.getElementById(selectElementId);
   const targetSpeed = speedSelect ? parseFloat(speedSelect.value) : 1.0;
 
   let cleanCode = fileCode.replace(".mp3", "");
   const audioPath = `assets/audio/${cleanCode}.mp3`;
-  const audio = new Audio(audioPath);
-  audio.playbackRate = targetSpeed;
   
-  audio.play().catch(err => {
-    console.log("Ses bulunamadı, aranan yol:", audioPath);
+  // Yeni sesi oluştur ve hafızaya kaydet
+  currentPlayingAudio = new Audio(audioPath);
+  currentPlayingAudio.playbackRate = targetSpeed;
+  
+  currentPlayingAudio.play().catch(err => {
+    console.error("Ses oynatılamadı veya bulunamadı, aranan yol:", audioPath, err);
   });
 }
 
@@ -699,10 +709,20 @@ function tcTick(){
   document.getElementById('tc-fill').style.width = '0%';
   clearInterval(tcProgTimer);
 
-  const a = new Audio(`assets/audio/d2_tayca_${tcIdx+3}.mp3`);
-  a.play().catch(()=>{});
+  // 🚫 ÖNCEDEN ÇALAN BİR SES VARSA (ELEVENLABS DAHİL) ONU DURDURUYORUZ
+  if (currentPlayingAudio) {
+    currentPlayingAudio.pause();
+    currentPlayingAudio.currentTime = 0;
+  }
+
+  // Yeni ses nesnesini bizim merkezi değişkenimize eşitliyoruz
+  currentPlayingAudio = new Audio(`assets/audio/d2_tayca_${tcIdx+3}.mp3`);
   
-  a.onended = function(){
+  currentPlayingAudio.play().catch((err)=>{
+    console.error("Tayca ses çalınamadı:", err);
+  });
+  
+  currentPlayingAudio.onended = function(){
     tcProgTimer = setInterval(()=>{
       tcElapsed += 50;
       document.getElementById('tc-fill').style.width = Math.min(100, Math.round(tcElapsed/1000*100))+'%';
@@ -865,12 +885,20 @@ if (pct >= 50) {
     btn.style.color = '';
   };
 
-  recognition.onerror = function() {
-    result.innerHTML = '<span style="color:#A32D2D">⚠ Mikrofon hatası — izin verdin mi?</span>';
+recognition.onerror = function(event) {
     btn.textContent = '🎤 Mikrofonu Aç';
     btn.style.background = '';
     btn.style.borderColor = '';
     btn.style.color = '';
+
+    // Hata türüne göre kullanıcıyı net şekilde yönlendiriyoruz
+    if (event.error === 'not-allowed') {
+      result.innerHTML = '<span style="color:#A32D2D; font-weight: 500;">⚠️ Mikrofon izni reddedildi. Adres çubuğundaki kilit simgesine tıklayarak izin verin.</span>';
+    } else if (event.error === 'no-speech') {
+      result.innerHTML = '<span style="color:#A32D2D; font-weight: 500;">🔇 Ses algılanamadı. Lütfen tekrar deneyin.</span>';
+    } else {
+      result.innerHTML = '<span style="color:#A32D2D; font-weight: 500;">⚠ Mikrofon hatası oluştu (' + event.error + ').</span>';
+    }
   };
 
   recognition.onend = function() {
@@ -1146,7 +1174,7 @@ window.QUIZ_TARTI = [
 
 </script>
 
-<script src="./day2.js?v=14" charset="UTF-14"></script>
+<script src="./day2.js?v=15" charset="UTF-15"></script>
 
 <script>
   // ─── 6. RUNNING APPLICATION INITIALIZATION ───────────────────────
