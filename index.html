@@ -677,6 +677,12 @@ window.tcToggle = function(){
 };
 
 window.tcReset = function(){
+  // 🔇 Sıfırla butonuna basıldığı an çalan Tayca sesi anında susturuyoruz
+  if (currentPlayingAudio) {
+    currentPlayingAudio.pause();
+    currentPlayingAudio.currentTime = 0;
+  }
+
   clearInterval(tcTimer); clearInterval(tcProgTimer);
   tcRunning=false; tcIdx=0;
   document.getElementById('tc-num').textContent='—';
@@ -685,7 +691,7 @@ window.tcReset = function(){
   document.getElementById('tc-meaning').textContent='';
   document.getElementById('tc-fill').style.width='0%';
   document.getElementById('tc-start').textContent='▶ Başlat';
-  window.tcToggle();    // ← bu satırı ekle
+  window.tcToggle();
 };
 
 function tcTick(){
@@ -1174,7 +1180,7 @@ window.QUIZ_TARTI = [
 
 </script>
 
-<script src="./day2.js?v=15" charset="UTF-15"></script>
+<script src="./day2.js?v=16" charset="UTF-16"></script>
 
 <script>
   // ─── 6. RUNNING APPLICATION INITIALIZATION ───────────────────────
