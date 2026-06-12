@@ -781,16 +781,15 @@ function renderQuiz() {
     const savedSec = localStorage.getItem('tmf_curSec');
     const savedQuizList = localStorage.getItem('tmf_shuffledQuiz');
 
-    // Eğer hafızada 0'dan büyük bir soru indeksi kalmışsa;
-    // Yan sekmelerin ne yaptığı umurumuzda değil, hafızadaki durumu zorla dayatıyoruz!
+    // Eğer hafızada geçerli bir ilerleme varsa, dışarıdan gelen her şeyi ez ve hafızayı dayat!
     if (savedIdx && parseInt(savedIdx) > 0) {
         qIdx = parseInt(savedIdx);
         score = parseInt(localStorage.getItem('tmf_score')) || 0;
         
-        // Navigasyon butonlarının bozduğu kategoriyi hafızadan geri tamir ediyoruz:
         if (savedSec) curSec = savedSec; 
         
         if (savedQuizList) {
+            // 🔥 BURASI KRİTİK: Hafızadaki listeyi küresel değişkenimize çakıyoruz!
             shuffledQuiz = JSON.parse(savedQuizList);
         }
         console.log("Navigasyon engeli aşıldı! Hafıza zorla yüklendi. Soru indeksi:", qIdx);
@@ -805,12 +804,14 @@ function renderQuiz() {
     else if (curSec === "d2_senaryo_equipment") activeQuiz = window.QUIZ_EQUIPMENT;
     else if (curSec === "d2_senaryo_referee") activeQuiz = window.QUIZ_REFEREE;
 
-    // 🔥 LİSTE KONTROLÜ
-    if (!shuffledQuiz || shuffledQuiz.length === 0) {
+    // 🔥 DEĞİŞEN EN ÖNEMLİ KONTROL SATIRI:
+    // Sadece ve sadece hem hafızada liste yoksa HEM DE şu anki liste boşsa karıştır!
+    // Eğer hafızadan liste yüklendiyse, bu if blokunu tamamen es geçecek ve listeye dokunmayacak!
+    if (!savedQuizList && (!shuffledQuiz || shuffledQuiz.length === 0)) {
         shuffledQuiz = shuffle(activeQuiz);
     }
 
-    // Ekrana her yeni soru geldiğinde hafızayı anında tazele:
+    // Ekrana her yeni soru geldiğinde hafızayı anında güncel tut:
     if (qIdx < shuffledQuiz.length) {
         saveQuizState(); 
     }
@@ -1270,7 +1271,7 @@ window.QUIZ_TARTI = [
 
 </script>
 
-<script src="./day2.js?v=29" charset="UTF-29"></script>
+<script src="./day2.js?v=30" charset="UTF-30"></script>
 
 <script>
   // ─── 6. RUNNING APPLICATION INITIALIZATION ───────────────────────
