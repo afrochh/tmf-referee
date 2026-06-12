@@ -853,11 +853,18 @@ const quizSesKodu = `quiz_${curSec}_${origIdx + 1}`;
       </div>
     </div>`;
 
-  c.querySelectorAll(".opt").forEach(btn => btn.addEventListener("click", function() {
+ c.querySelectorAll(".opt").forEach(btn => btn.addEventListener("click", function() {
     checkAns(+this.dataset.idx, +this.dataset.correct,
       decodeURIComponent(this.dataset.ex), decodeURIComponent(this.dataset.ans), this.dataset.ses, quizSelectId);
   }));
-}
+  
+  // ─── 🥊 İŞTE MENÜ KODLARINI NAKAVT EDEN SON DOKUNUŞ ───
+  // Fonksiyon biterken global değişkenlerin dışarıdan sıfırlanmasını engellemek için hafızayı bir kez daha mühürlüyoruz!
+  if (savedIdx && parseInt(savedIdx) > 0) {
+      qIdx = parseInt(savedIdx);
+      if (savedQuizList) shuffledQuiz = JSON.parse(savedQuizList);
+  }
+} 
 
 function checkAns(idx, correct, ex, ans, sesKodu, quizSelectId) {
   if (answered) return; answered = true;
@@ -1271,7 +1278,7 @@ window.QUIZ_TARTI = [
 
 </script>
 
-<script src="./day2.js?v=30" charset="UTF-30"></script>
+<script src="./day2.js?v=31" charset="UTF-31"></script>
 
 <script>
   // ─── 6. RUNNING APPLICATION INITIALIZATION ───────────────────────
