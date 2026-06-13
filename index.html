@@ -218,7 +218,7 @@ body.dark .footer-btn {
   font-weight: 600;
   font-size: 12px;
   cursor: pointer;
-  margin: 6px auto;
+  margin: 0 16px 6px;
   width: fit-content;
   display: none;
 }
@@ -296,10 +296,10 @@ body.dark .footer-btn {
 <div id="l4-nav-wrap"></div>
 <div class="search-wrap" id="search-wrap" style="display:none">
   <input class="search-input" id="search-input" type="text" placeholder="🔍 Cümle veya kelime ara..." oninput="searchPhrases(this.value)">
+  <button id="resume-quiz-btn" style="display:none" onclick="resumeQuiz()">
+    🔄 Kaldığın Yerden Devam Et
+  </button>
 </div>
-<button id="resume-quiz-btn" style="display:none" onclick="resumeQuiz()">
-  🔄 Kaldığın Yerden Devam Et
-</button>
 <div class="content" id="content"></div>
 
 <div class="footer">
@@ -1349,7 +1349,7 @@ window.QUIZ_TARTI = [
 
 </script>
 
-<script src="./day2.js?v=40" charset="UTF-40"></script>
+<script src="./day2.js?v=41" charset="UTF-41"></script>
 
 <script>
   // ─── 6. RUNNING APPLICATION INITIALIZATION ───────────────────────
