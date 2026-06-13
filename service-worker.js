@@ -1,4 +1,4 @@
-const CACHE = "tmf-v38";
+const CACHE = "tmf-v39";
 const FILES = [
   "/tmf-referee/",
   "/tmf-referee/index.html",
@@ -713,17 +713,13 @@ const FILES = [
 ];
 
 self.addEventListener("install", e => {
-  e.waitUntil(caches.open(CACHE).then(c => c.addAll(FILES)));
-});
-
-self.addEventListener("activate", e => {
-  e.waitUntil(caches.keys().then(keys =>
-    Promise.all(keys.filter(k => k !== CACHE).map(k => caches.delete(k)))
-  ));
-});
-
-self.addEventListener("fetch", e => {
-  e.respondWith(
-    caches.match(e.request).then(r => r || fetch(e.request))
+  e.waitUntil(
+    caches.open(CACHE).then(cache => {
+      return Promise.allSettled(
+        FILES.map(file => cache.add(file).catch(err => {
+          console.warn("Cache eklenemedi:", file, err);
+        }))
+      );
+    })
   );
 });
