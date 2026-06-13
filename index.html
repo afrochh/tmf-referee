@@ -277,10 +277,11 @@ body.dark .footer-btn {
 <div class="search-wrap" id="search-wrap" style="display:none">
   <input class="search-input" id="search-input" type="text" placeholder="🔍 Cümle veya kelime ara..." oninput="searchPhrases(this.value)">
 </div>
-<button id="resume-quiz-btn" style="display: none; background: #28a745; color: white; border: none; padding: 8px 20px; border-radius: 10px; font-weight: bold; margin: 8px auto 8px; width: auto; cursor: pointer; font-size: 13px; display: block;" onclick="resumeQuiz()">
-  🔄 Kaldığın Yerden Devam Et
-</button>
-<div class="content" id="content"></div>
+<div class="content" id="content">
+  <button id="resume-quiz-btn" style="display: none; background: #28a745; color: white; border: none; padding: 8px 20px; border-radius: 10px; font-weight: bold; margin: 0 auto 12px; width: auto; cursor: pointer; font-size: 13px; display: block;" onclick="resumeQuiz()">
+    🔄 Kaldığın Yerden Devam Et
+  </button>
+</div>
 
 <div class="footer">
   <div class="footer-credits">
@@ -1141,22 +1142,13 @@ const NAV = {
     ]
   },
   social: {
-    label: "Sosyal İletişim",
-    l2: [
-      {
-        id: "s_selamlasma_l2", label: "Selamlaşma (Greetings & Small Talk)",
-        l3: [ { id: "s_selamlasma", label: "Selamlaşma ve Hal Hatır Sorma", leaf: true } ]
-      },
-      {
-        id: "s_tanitma_l2", label: "Kendini Tanıtma (Introduction & Networking)",
-        l3: [ { id: "s_tanitma", label: "Kendini Tanıtma ve Çevre Edinme", leaf: true } ]
-      },
-      {
-        id: "s_ulasim_l2", label: "Ulaşım & Yemek (Transport & Meals)",
-        l3: [ { id: "s_ulasim", label: "Ulaşım, Servis ve Yemek Durumları", leaf: true } ]
-      },
-    ]
-  }
+  label: "Sosyal İletişim",
+  l2: [
+    { id: "s_selamlasma", label: "Selamlaşma (Greetings & Small Talk)", l3: [] },
+    { id: "s_tanitma",    label: "Kendini Tanıtma (Introduction & Networking)", l3: [] },
+    { id: "s_ulasim",     label: "Ulaşım & Yemek (Transport & Meals)", l3: [] },
+  ]
+}
 };
 
 // ─── PHRASES DATA ──────────────────────────────────────────────────
@@ -1334,7 +1326,7 @@ window.QUIZ_TARTI = [
 
 </script>
 
-<script src="./day2.js?v=34" charset="UTF-34"></script>
+<script src="./day2.js?v=35" charset="UTF-35"></script>
 
 <script>
   // ─── 6. RUNNING APPLICATION INITIALIZATION ───────────────────────
