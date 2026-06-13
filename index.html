@@ -202,6 +202,20 @@ body.dark .footer-btn {
   color: #fff !important;
 }
 
+#resume-quiz-btn {
+  display: none;
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 13px;
+  cursor: pointer;
+  margin: 8px auto;
+  width: fit-content;
+  text-align: center;
+}
 /* QR Kod Açılır Pencere Tasarımı (Modal) */
 .qr-modal {
   display: none;
@@ -277,11 +291,10 @@ body.dark .footer-btn {
 <div class="search-wrap" id="search-wrap" style="display:none">
   <input class="search-input" id="search-input" type="text" placeholder="🔍 Cümle veya kelime ara..." oninput="searchPhrases(this.value)">
 </div>
-<div class="content" id="content">
-  <button id="resume-quiz-btn" style="display: none; background: #28a745; color: white; border: none; padding: 8px 20px; border-radius: 10px; font-weight: bold; margin: 0 auto 12px; width: auto; cursor: pointer; font-size: 13px; display: block;" onclick="resumeQuiz()">
-    🔄 Kaldığın Yerden Devam Et
-  </button>
-</div>
+<button id="resume-quiz-btn" onclick="resumeQuiz()">
+  🔄 Kaldığın Yerden Devam Et
+</button>
+<div class="content" id="content"></div>
 
 <div class="footer">
   <div class="footer-credits">
@@ -1326,7 +1339,7 @@ window.QUIZ_TARTI = [
 
 </script>
 
-<script src="./day2.js?v=35" charset="UTF-35"></script>
+<script src="./day2.js?v=36" charset="UTF-36"></script>
 
 <script>
   // ─── 6. RUNNING APPLICATION INITIALIZATION ───────────────────────
