@@ -1,4 +1,4 @@
-const CACHE = "tmf-v41";
+const CACHE = "tmf-v42";
 const FILES = [
   "/tmf-referee/",
   "/tmf-referee/index.html",
@@ -240,7 +240,7 @@ const FILES = [
   "/tmf-referee/assets/audio/d2_karar_13_short.mp3",
   "/tmf-referee/assets/audio/d2_karar_14.mp3",
   "/tmf-referee/assets/audio/d2_karar_14_short.mp3",
-  "/tmf-referee/assets/audio/d2_karar_16.mp3",
+  "/tmf-referee/assets/audio/d2_karar_15.mp3",
   "/tmf-referee/assets/audio/d2_karar_1_short.mp3",
   "/tmf-referee/assets/audio/d2_karar_2.mp3",
   "/tmf-referee/assets/audio/d2_karar_2_short.mp3",
@@ -389,8 +389,8 @@ const FILES = [
   "/tmf-referee/assets/audio/d2_uyari_32_short.mp3",
   "/tmf-referee/assets/audio/d2_uyari_33.mp3",
   "/tmf-referee/assets/audio/d2_uyari_33_short.mp3",
-  "/tmf-referee/assets/audio/d2_uyari_35.mp3",
-  "/tmf-referee/assets/audio/d2_uyari_35_short.mp3",
+  "/tmf-referee/assets/audio/d2_uyari_34.mp3",
+  "/tmf-referee/assets/audio/d2_uyari_34_short.mp3",
   "/tmf-referee/assets/audio/d2_uyari_3_short.mp3",
   "/tmf-referee/assets/audio/d2_uyari_4.mp3",
   "/tmf-referee/assets/audio/d2_uyari_4_short.mp3",
